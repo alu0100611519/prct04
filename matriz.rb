@@ -4,6 +4,7 @@
   a = Array.new
   b = Array.new
   sum = Array.new
+  mult = Array.new
   puts "Introduzca la dimension de las matrices"
   x = gets.to_i
   
@@ -75,4 +76,30 @@
      end
      puts "\n"
   end
+  
+  
+  # MULTIPLICACION DE MATRICES
+  
+    for i in 0...x do
+      mult[i]= Array.new
+      for j in 0...x do
+	for k in 0...x do
+	  mult[i][j]=0
+	  mult[i][j] += a[i][k] * b[k][j]
+	end
+      end
+    end
+    
+    # MOSTRANDO MATRIZ MULTIPLICADA
+    puts " *******************************"
+    puts " MOSTRAR MATRIZ MULTIPLICADA "
+     for i in 0...x do
+    for j in 0...x do
+      print " #{mult[i][j]} " 
+     end
+     puts "\n"
+  end
+    
+    
+	  
   
