@@ -69,10 +69,11 @@
    puts " *******************************" 
  
    puts " MOSTRAR MATRIZ SUMADA "
-  
+  mult[i]= Array.new
   for i in 0...x do
     for j in 0...x do
       print " #{sum[i][j]} " 
+      mult[i][j]='0'
      end
      puts "\n"
   end
@@ -80,12 +81,9 @@
   
   # MULTIPLICACION DE MATRICES
   
-  puts " *******************************"
     for i in 0...x do
-      mult[i]= Array.new
       for j in 0...x do
 	for k in 0...x do
-	  mult[i][j]=0
 	  mult[i][j] += a[i][k] * b[k][j]
 	end
       end
@@ -93,6 +91,7 @@
     
     # MOSTRANDO MATRIZ MULTIPLICADA
     puts " *******************************"
+    puts " MOSTRAR MATRIZ MULTIPLICADA "
      for i in 0...x do
     for j in 0...x do
       print " #{mult[i][j]} " 

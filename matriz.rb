@@ -83,8 +83,8 @@
     for i in 0...x do
       mult[i]= Array.new
       for j in 0...x do
+	mult[i][j]=0
 	for k in 0...x do
-	  mult[i][j]=0
 	  mult[i][j] += a[i][k] * b[k][j]
 	end
       end
